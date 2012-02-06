@@ -173,10 +173,6 @@
       <Project>{5F664385-9E70-46B6-BC9D-F24E5722B97E}</Project>
       <Name>10-Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\20-Infrastructure.DataSource\20-Infrastructure.DataSource.csproj">
-      <Project>{F1304786-7161-42DD-9964-A12F0C19F83C}</Project>
-      <Name>20-Infrastructure.DataSource</Name>
-    </ProjectReference>
     <ProjectReference Include="..\21-Infrastructure.Configuration\21-Infrastructure.Configuration.csproj">
       <Project>{3C11856A-944E-4F9C-BB9C-E0600E3C3D8B}</Project>
       <Name>21-Infrastructure.Configuration</Name>

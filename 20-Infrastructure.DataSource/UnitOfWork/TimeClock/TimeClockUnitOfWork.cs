@@ -7,7 +7,12 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.TimeClock
 {
     public class TimeClockUnitOfWork : BaseUnitOfWork, ITimeClockUnitOfWork
     {
-        private IRepository<TimeCard> _timeCard;
+        private IRepository<TimeCard> _timeCard;        
+
+        public TimeClockUnitOfWork(IContext context) : base( context)
+        {
+
+        }
 
         public IRepository<TimeCard> TimeClock
         {

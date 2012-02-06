@@ -31,11 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +64,10 @@
     <ProjectReference Include="..\20-Infrastructure.DataSource\20-Infrastructure.DataSource.csproj">
       <Project>{F1304786-7161-42DD-9964-A12F0C19F83C}</Project>
       <Name>20-Infrastructure.DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\30-CrossCutting.Common\30-CrossCutting.Common.csproj">
+      <Project>{3368FB67-1889-4F3A-B9BD-A4DAD9D92A95}</Project>
+      <Name>30-CrossCutting.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

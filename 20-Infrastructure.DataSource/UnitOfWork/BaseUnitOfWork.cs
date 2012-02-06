@@ -7,11 +7,11 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
 {
     public abstract class BaseUnitOfWork : IUnitOfWork
     {        
-        protected IContext _context;
+        protected readonly IContext _context;
 
-        public BaseUnitOfWork()
+        public BaseUnitOfWork(IContext context)
         {
-            _context = new TimeTweetContext();
+            _context = context;            
             _context.LazyLoadingEnabled = false;
         }             
 

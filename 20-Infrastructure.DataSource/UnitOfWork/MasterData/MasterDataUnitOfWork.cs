@@ -9,7 +9,12 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData
         private IRepository<Employee> _employee;
         private IRepository<Company> _company;
         private IRepository<Language> _Language;
-        private IRepository<State> _state;        
+        private IRepository<State> _state;
+
+        public MasterDataUnitOfWork(IContext context) : base(context)
+        {
+
+        }
         
         public IRepository<Company> Company
         {
