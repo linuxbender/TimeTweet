@@ -1,10 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
-using Ch.TimeTweet.Domain.Service;
 using Ch.TimeTweet.Domain.Service.Entity;
 
-namespace Ch.TimeTweet.Domain.Entity
+namespace Ch.TimeTweet.Domain.Entity.MasterData
 {
     public abstract class BaseEntity : IEntity, IConcurrencyControl, ITimeStampsControl, IUpdateControl
     {
@@ -18,6 +17,7 @@ namespace Ch.TimeTweet.Domain.Entity
         /// <summary>
         /// IConcurrencyControl
         /// </summary>
+        [Timestamp]
         public byte[] RowVersion { get; set; }
 
         /// <summary>

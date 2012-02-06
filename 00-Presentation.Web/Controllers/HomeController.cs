@@ -1,23 +1,23 @@
 ﻿using System.Web.Mvc;
 using Ch.TimeTweet.CrossCutting.Common.Mapping;
-using Ch.TimeTweet.Infrastructure.DataSource;
+using Ch.TimeTweet.Domain.UnitOfWork.MasterData;
+using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData;
 
 namespace Ch.TimeTweet.Presentation.Web.Controllers
 {
     public class HomeController : Controller
-    {       
-        private UnitOfWork uow;
+    {
+        private IMasterDataUnitOfWork uow;
 
         public HomeController()
         {
-            uow = new UnitOfWork();
+            uow = new MasterDataUnitOfWork();
         }
 
         public ActionResult Index()
-        {
-            // var foo = uow.Person.First(o => o.Id > 0);                     
+        {                                 
             var foo2 = uow.Company.SelectAll();
-            var foo4 = uow.Person.LoadRelation(o => o.Company);
+            var foo4 = uow.Employee.LoadRelation(o => o.Company);            
             
             return View();
         }

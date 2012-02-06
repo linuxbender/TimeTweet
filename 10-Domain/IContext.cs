@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using Ch.TimeTweet.Domain.Service;
 
 namespace Ch.TimeTweet.Domain
 {

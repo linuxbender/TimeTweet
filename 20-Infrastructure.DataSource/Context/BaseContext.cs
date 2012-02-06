@@ -3,7 +3,7 @@ using Ch.TimeTweet.CrossCutting.Common.Constant;
 using Ch.TimeTweet.Domain;
 using Ch.TimeTweet.Domain.Service;
 
-namespace Ch.TimeTweet.Infrastructure.DataSource
+namespace Ch.TimeTweet.Infrastructure.DataSource.Context
 {
     public abstract class BaseContext : DbContext, IContext
     {

@@ -6,7 +6,7 @@ namespace Ch.TimeTweet.Domain.Entity.MasterData
     public class State : BaseEntity
     {
         [Required]
-        [StringLength(Number.MaxLength80)]
+        [StringLength(Number.MaxLength60)]
         public string Name { get; set; }
 
         [Required]

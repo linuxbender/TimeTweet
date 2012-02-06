@@ -1,9 +1,10 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using Ch.TimeTweet.Domain.Entity;
+using Ch.TimeTweet.Domain.Entity.MasterData;
+using Ch.TimeTweet.Domain.Entity.TimeClock;
 
-namespace Ch.TimeTweet.Infrastructure.DataSource.TimeTweet
+namespace Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet
 {
     public class TimeTweetContext : BaseContext
     {        
@@ -15,7 +16,7 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.TimeTweet
         }
         
         public IDbSet<Company> Company { get; set; }
-        public IDbSet<Person> Person { get; set; }
+        public IDbSet<Employee> Person { get; set; }
         public IDbSet<TimeCard> TimeCard { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -47,9 +47,11 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="BaseContext.cs" />
-    <Compile Include="TimeTweet\TimeTweetContext.cs" />
-    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="Context\BaseContext.cs" />
+    <Compile Include="Context\TimeTweet\TimeTweetContext.cs" />
+    <Compile Include="UnitOfWork\BaseUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\MasterData\MasterDataUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\TimeClock\TimeClockUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\10-Domain\10-Domain.csproj">

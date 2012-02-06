@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
+using Ch.TimeTweet.Domain.Entity.TimeClock;
 
-namespace Ch.TimeTweet.Domain.Entity
+namespace Ch.TimeTweet.Domain.Entity.MasterData
 {
-    public class Person : BaseEntity
+    public class Employee : BaseEntity
     {
         [StringLength(Number.MaxLength60)]
         public string FirstName { get; set; }
@@ -15,6 +16,6 @@ namespace Ch.TimeTweet.Domain.Entity
         public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
 
-        public virtual ICollection<TimeCard> Times { get; set; }
+        public virtual ICollection<TimeCard> TimeCard { get; set; }
     }
 }

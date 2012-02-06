@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
 
-namespace Ch.TimeTweet.Domain.Entity
+namespace Ch.TimeTweet.Domain.Entity.MasterData
 {
     public class Company : BaseEntity
     {        
@@ -10,6 +10,6 @@ namespace Ch.TimeTweet.Domain.Entity
         [StringLength(Number.MaxLength60)]
         public string Name { get; set; }
 
-        public ICollection<Person> Person { get; set; }
+        public ICollection<Employee> Employee { get; set; }
     }
 }
