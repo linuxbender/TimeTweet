@@ -7,17 +7,17 @@ namespace Ch.TimeTweet.Presentation.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IMasterDataUnitOfWork uow;
+        private IMasterDataUnitOfWork _uow;
 
-        public HomeController()
+        public HomeController(IMasterDataUnitOfWork uow)
         {
-            uow = new MasterDataUnitOfWork();
+            _uow = uow;
         }
 
         public ActionResult Index()
         {                                 
-            var foo2 = uow.Company.SelectAll();
-            var foo4 = uow.Employee.LoadRelation(o => o.Company);            
+            var foo2 = _uow.Company.SelectAll();
+            var foo4 = _uow.Employee.LoadRelation(o => o.Company);            
             
             return View();
         }

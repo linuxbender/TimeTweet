@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Ch.TimeTweet.Infrastructure.Configuration;
 
 namespace _00_Presentation.Web
 {
@@ -35,6 +36,7 @@ namespace _00_Presentation.Web
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+            ControllerBuilder.Current.SetControllerFactory(new NinjectMvcControllerFactory());            
         }
     }
 }
