@@ -1,18 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Ch.TimeTweet.Infrastructure.DataSource;
 
 namespace Ch.TimeTweet.Presentation.Web.Controllers
 {
     public class HomeController : Controller
-    {
-        //
-        // GET: /Home/
+    {       
+        private UnitOfWork uow;
+
+        public HomeController()
+        {
+            uow = new UnitOfWork();
+        }
 
         public ActionResult Index()
         {
+            // var foo = uow.Person.First(o => o.Id > 0);                     
+            var foo2 = uow.Company.SelectAll();
+            var foo4 = uow.Person.LoadRelation(o => o.Company);
+            
             return View();
         }
 

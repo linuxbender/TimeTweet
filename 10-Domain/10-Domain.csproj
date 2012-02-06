@@ -31,8 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.2.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +45,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="Entity\Company.cs" />
+    <Compile Include="Entity\MasterData\Language.cs" />
+    <Compile Include="Entity\MasterData\State.cs" />
+    <Compile Include="Entity\Person.cs" />
+    <Compile Include="Entity\TimeCard.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="Service\Entity\IConcurrencyControl.cs" />
+    <Compile Include="Service\IEntity.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Service\Entity\ILanguageControl.cs" />
+    <Compile Include="Service\Entity\IStateControl.cs" />
+    <Compile Include="Service\Entity\IStatusControl.cs" />
+    <Compile Include="Service\Entity\ITimeStampsControl.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Service\Entity\IUpdateControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\30-CrossCutting.Common\30-CrossCutting.Common.csproj">
+      <Project>{3368FB67-1889-4F3A-B9BD-A4DAD9D92A95}</Project>
+      <Name>30-CrossCutting.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
