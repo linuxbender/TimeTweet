@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Ch.TimeTweet.CrossCutting.Common.Mapping;
 using Ch.TimeTweet.Domain.UnitOfWork.MasterData;
 using Ch.TimeTweet.Domain.UnitOfWork.TimeClock;
+using Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet;
 using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData;
 using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.TimeClock;
 using Ninject;
-using Ch.TimeTweet.Infrastructure.DataSource;
-using Ch.TimeTweet.Domain.Entity.MasterData;
-using Ch.TimeTweet.Domain;
-using Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet;
-using System.Data.Entity;
-using Ch.TimeTweet.Domain.Entity.TimeClock;
-using Ch.TimeTweet.CrossCutting.Common.Mapping;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration
 {
