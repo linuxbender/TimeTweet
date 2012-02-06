@@ -177,6 +177,10 @@
       <Project>{F1304786-7161-42DD-9964-A12F0C19F83C}</Project>
       <Name>20-Infrastructure.DataSource</Name>
     </ProjectReference>
+    <ProjectReference Include="..\30-CrossCutting.Common\30-CrossCutting.Common.csproj">
+      <Project>{3368FB67-1889-4F3A-B9BD-A4DAD9D92A95}</Project>
+      <Name>30-CrossCutting.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

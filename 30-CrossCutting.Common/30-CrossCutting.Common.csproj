@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="Constant\Number.cs" />
     <Compile Include="Constant\StringConstant.cs" />
+    <Compile Include="Mapping\ActionName.cs" />
+    <Compile Include="Mapping\AreaName.cs" />
+    <Compile Include="Mapping\ControllerName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

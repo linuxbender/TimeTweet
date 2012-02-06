@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Ch.TimeTweet.CrossCutting.Common.Mapping;
 using Ch.TimeTweet.Infrastructure.DataSource;
 
 namespace Ch.TimeTweet.Presentation.Web.Controllers
@@ -47,7 +48,7 @@ namespace Ch.TimeTweet.Presentation.Web.Controllers
             {
                 // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
+                return RedirectToAction(ActionName.Index);
             }
             catch
             {
@@ -72,8 +73,8 @@ namespace Ch.TimeTweet.Presentation.Web.Controllers
             try
             {
                 // TODO: Add update logic here
- 
-                return RedirectToAction("Index");
+
+                return RedirectToAction(ActionName.Index);
             }
             catch
             {
@@ -98,8 +99,8 @@ namespace Ch.TimeTweet.Presentation.Web.Controllers
             try
             {
                 // TODO: Add delete logic here
- 
-                return RedirectToAction("Index");
+
+                return RedirectToAction(ActionName.Index);
             }
             catch
             {
