@@ -31,9 +31,10 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.Context
         {
             this.SaveChanges();
         }
-        public void DisposeContext()
-        {
-            this.Dispose();
-        }
+
+        //public void DisposeContext()
+        //{
+        //    this.Dispose();
+        //}
     }
 }

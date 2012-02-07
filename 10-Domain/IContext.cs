@@ -8,6 +8,6 @@ namespace Ch.TimeTweet.Domain
         bool ProxyCreationEnabled { set; }
         IDbSet<TEntity> SetIDbSet<TEntity>() where TEntity : class, IEntity;
         void Commit();
-        void DisposeContext();
+        // void DisposeContext();
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Web Developer Express 2010
+# Visual Studio 2010
+# SharpDevelop 4.1.0.8000
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00-Presentation.Web", "00-Presentation.Web\00-Presentation.Web.csproj", "{E9B8FB06-0FDE-4733-96FF-292385191257}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Presentation.Web.Tests", "01-Presentation.Web.Tests\01-Presentation.Web.Tests.csproj", "{544A067C-767A-40DC-B294-488B7BF12464}"

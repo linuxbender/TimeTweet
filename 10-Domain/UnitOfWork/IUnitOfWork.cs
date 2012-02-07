@@ -2,10 +2,10 @@
 
 namespace Ch.TimeTweet.Domain.UnitOfWork
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork // : IDisposable
     {    	
         void Rollback();
         void Commit();
-        void DisposeUnitOfWork();
+        // void DisposeUnitOfWork();
     }
 }

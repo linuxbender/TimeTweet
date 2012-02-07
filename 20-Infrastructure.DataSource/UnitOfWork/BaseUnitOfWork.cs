@@ -25,23 +25,23 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
             _context.Commit();
         }
 
-        public void Dispose()
-        {
-            if (_context != null)
-            {
-                _context.DisposeContext();
-            }
-            GC.SuppressFinalize(this);
-        }
+        //public void Dispose()
+        //{
+        //    if (_context != null)
+        //    {
+        //        _context.DisposeContext();
+        //    }
+        //    GC.SuppressFinalize(this);
+        //}
 
-        public void DisposeUnitOfWork()
-        {
-            if (_context != null)
-            {
-                _context.DisposeContext();
-                this.Dispose();
-            }
-            GC.SuppressFinalize(this);
-        }
+        //public void DisposeUnitOfWork()
+        //{
+        //    if (_context != null)
+        //    {
+        //        _context.DisposeContext();
+        //        this.Dispose();
+        //    }
+        //    GC.SuppressFinalize(this);
+        //}
     }
 }
