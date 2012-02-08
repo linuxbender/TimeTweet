@@ -50,8 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Setup\Context.cs" />
+    <Compile Include="Setup\IConfiguration.cs" />
     <Compile Include="NinjectMvcControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\Repository.cs" />
+    <Compile Include="Setup\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -46,6 +46,7 @@
     <Compile Include="Mapping\AreaName.cs" />
     <Compile Include="Mapping\ArgumentName.cs" />
     <Compile Include="Mapping\ControllerName.cs" />
+    <Compile Include="Mapping\PropertyName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

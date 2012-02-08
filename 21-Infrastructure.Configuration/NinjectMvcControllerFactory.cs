@@ -2,14 +2,8 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using Ch.TimeTweet.CrossCutting.Common.Mapping;
-using Ch.TimeTweet.Domain;
-using Ch.TimeTweet.Domain.UnitOfWork.MasterData;
-using Ch.TimeTweet.Domain.UnitOfWork.TimeClock;
-using Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet;
-using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData;
-using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.TimeClock;
+using Ch.TimeTweet.Infrastructure.Configuration.Setup;
 using Ninject;
-using Ch.TimeTweet.Domain.Entity.TimeClock;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration
 {
@@ -20,7 +14,23 @@ namespace Ch.TimeTweet.Infrastructure.Configuration
         public NinjectMvcControllerFactory()
         {
             _ninjectKernel = new StandardKernel();
-            MvcConfiguration();
+            _ninjectKernel.Settings.InjectNonPublic = true;
+            Setup();                   
+        }
+
+        private void Setup()
+        {
+            _ninjectKernel.Bind<IConfiguration>().To<Context>().InSingletonScope()
+            .WithConstructorArgument(ArgumentName.ninjectKernel, _ninjectKernel);
+            _ninjectKernel.Get<Context>().Initialization();
+
+            _ninjectKernel.Bind<IConfiguration>().To<Repository>().InSingletonScope()
+            .WithConstructorArgument(ArgumentName.ninjectKernel, _ninjectKernel);
+            _ninjectKernel.Get<Repository>().Initialization();
+
+            _ninjectKernel.Bind<IConfiguration>().To<UnitOfWork>().InSingletonScope()
+            .WithConstructorArgument(ArgumentName.ninjectKernel, _ninjectKernel);
+            _ninjectKernel.Get<UnitOfWork>().Initialization();                   
         }
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
@@ -39,25 +49,6 @@ namespace Ch.TimeTweet.Infrastructure.Configuration
         //    Debug.WriteLine("context hashCode " + context.GetHashCode().ToString());
         //    Debug.WriteLine("unitOfWork hashCode " + unitOfWork.GetHashCode().ToString());            
         //    base.ReleaseController(controller);
-        //}
-
-        private void MvcConfiguration()
-        {
-            _ninjectKernel.Bind<IContext>().To<TimeTweetContext>().InRequestScope();            
-            // UnitOfWork ID
-            _ninjectKernel.Bind<IMasterDataUnitOfWork>()
-                .To<MasterDataUnitOfWork>().InRequestScope()
-                .WithConstructorArgument(ArgumentName.context, c => c.Kernel.Get<IContext>());
-
-            _ninjectKernel.Bind<ITimeClockUnitOfWork>()
-                .To<TimeClockUnitOfWork>().InRequestScope()
-                .WithConstructorArgument(ArgumentName.context, c => c.Kernel.Get<IContext>());                
-
-                         
-            //_ninjectKernel.Bind<IRepository<Employee>>().To<Repository<Employee>>();
-            //_ninjectKernel.Bind<IRepository<Company>>().To<Repository<Company>>();
-            //_ninjectKernel.Bind<IRepository<Language>>().To<Repository<Language>>();
-            //_ninjectKernel.Bind<IRepository<State>>().To<Repository<State>>();           
-        }
+        //}        
     }
 }

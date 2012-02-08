@@ -16,7 +16,7 @@ namespace Ch.TimeTweet.Presentation.Web.Controllers
         public ActionResult Index()
         {                                 
             var foo2 = _uow.Company.SelectAll();
-            var foo4 = _uow.Employee.LoadRelation(o => o.Company);
+            var foo4 = _uow.Employee.LoadRelation(o => o.Company);            
 
             return View(foo2);
         }
