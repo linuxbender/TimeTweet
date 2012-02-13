@@ -12,14 +12,14 @@ using Ninject.Parameters;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration.Setup
 {
-    public class UnitOfWork :IConfiguration
+    public class UnitOfWork : IConfiguration
     {
         public IKernel _ninjectKernel { get; set; }
 
         public UnitOfWork(IKernel ninjectKernel)
         {
-            _ninjectKernel = ninjectKernel;            
-        }     
+            _ninjectKernel = ninjectKernel;
+        }
 
         public void Initialization()
         {
@@ -36,7 +36,7 @@ namespace Ch.TimeTweet.Infrastructure.Configuration.Setup
             _ninjectKernel.Bind<ITimeClockUnitOfWork>()
                 .To<TimeClockUnitOfWork>().InRequestScope()
                 .WithConstructorArgument(ArgumentName.context, c => c.Kernel.Get<IContext>())
-                .WithParameter(new PropertyValue(PropertyName.TimeCard, c => c.Kernel.Get<Repository<TimeCard>>()));                     
+                .WithParameter(new PropertyValue(PropertyName.TimeCard, c => c.Kernel.Get<Repository<TimeCard>>()));
         }
     }
 }

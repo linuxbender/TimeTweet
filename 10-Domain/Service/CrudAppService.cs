@@ -23,7 +23,7 @@ namespace Ch.TimeTweet.Domain.Service
 
         public IEnumerable<TEntity> Read()
         {
-           return _repo.SelectAll();
+            return _repo.SelectAll();
         }
 
         public TEntity ReadById(int id)
@@ -33,7 +33,7 @@ namespace Ch.TimeTweet.Domain.Service
 
         public void Update(TEntity entity)
         {
-            
+            _repo.Update(entity);
         }
 
         public void Delete(int id)

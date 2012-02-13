@@ -25,42 +25,6 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData
         //        }
         //        return _company; 
         //    }
-        //}
-
-        //public IRepository<Employee> Employee
-        //{
-        //    get
-        //    {
-        //        if (_employee == null)
-        //        {
-        //            _employee = new Repository<Employee>(_context.SetIDbSet<Employee>());
-        //        }
-        //        return _employee;    
-        //    }
-        //}
-
-        //public IRepository<Language> Language
-        //{
-        //    get
-        //    {
-        //        if (_Language == null)
-        //        {
-        //            _Language = new Repository<Language>(_context.SetIDbSet<Language>());
-        //        }
-        //        return _Language;
-        //    }
-        //}
-
-        //public IRepository<State> State
-        //{
-        //    get
-        //    {
-        //        if (_state == null)
-        //        {
-        //            _state = new Repository<State>(_context.SetIDbSet<State>());
-        //        }
-        //        return _state;
-        //    }
-        //}                
+        //}        
     }
 }
