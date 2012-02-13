@@ -8,7 +8,6 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.TimeClock
     {
         public TimeClockUnitOfWork(IContext context) : base( context)
         {
-
         }
         
         public IRepository<TimeCard> TimeClock {get; private set;}          

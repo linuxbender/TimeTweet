@@ -53,6 +53,7 @@
     <Compile Include="Entity\MasterData\Employee.cs" />
     <Compile Include="Entity\TimeClock\TimeCard.cs" />
     <Compile Include="IContext.cs" />
+    <Compile Include="Service\CrudAppService.cs" />
     <Compile Include="Service\Entity\IConcurrencyControl.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="IRepository.cs" />
@@ -60,6 +61,9 @@
     <Compile Include="Service\Entity\IStateControl.cs" />
     <Compile Include="Service\Entity\IStatusControl.cs" />
     <Compile Include="Service\Entity\ITimeStampsControl.cs" />
+    <Compile Include="Service\ICrudAppService.cs" />
+    <Compile Include="Service\MasterData\CompanyAppService.cs" />
+    <Compile Include="Service\MasterData\ICompanyAppService.cs" />
     <Compile Include="UnitOfWork\IUnitOfWork.cs" />
     <Compile Include="Service\Entity\IUpdateControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Projection\" />
+    <Folder Include="Service\TimeClock\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

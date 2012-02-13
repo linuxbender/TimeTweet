@@ -8,7 +8,6 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData
     {
         public MasterDataUnitOfWork(IContext context) : base(context)
         {
-
         }
 
         public IRepository<Company> Company { get; private set; }
