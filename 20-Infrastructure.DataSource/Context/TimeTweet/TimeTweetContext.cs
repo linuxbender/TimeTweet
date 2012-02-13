@@ -20,8 +20,7 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet
         public IDbSet<TimeCard> TimeCard { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<IncludeMetadataConvention>();
+        {                        
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();            
         }        
     }

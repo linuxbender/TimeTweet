@@ -54,12 +54,13 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
         }
 
         public void Insert(TEntity newEntity)
-        {
+        {            
             _objectSet.Add(newEntity);
         }
 
         public void Delete(TEntity entity)
         {
+            if(entity.Id != 0)
             _objectSet.Remove(entity);
         }
 
@@ -71,6 +72,12 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
         public IEnumerable<TEntity> LoadRelation<TProperty>(Expression<Func<TEntity, TProperty>> predicate) where TProperty : class
         {
             return _objectSet.Where(t => t.Id > 0).Include(predicate);
+        }
+
+        public void Update(TEntity entity)
+        {
+            _objectSet.Attach(entity);
+            _context.isModified<TEntity>(entity);
         }
     }
 }

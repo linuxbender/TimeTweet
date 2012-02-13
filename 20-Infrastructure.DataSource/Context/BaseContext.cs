@@ -1,7 +1,7 @@
-﻿using System.Data.Entity;
+﻿using System.Data;
+using System.Data.Entity;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
 using Ch.TimeTweet.Domain;
-using Ch.TimeTweet.Domain.Service;
 
 namespace Ch.TimeTweet.Infrastructure.DataSource.Context
 {
@@ -30,6 +30,20 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.Context
         public void Commit()
         {
             this.SaveChanges();
+        }
+        public void isModified<TEntity>(TEntity entity) where TEntity : class, IEntity
+        {
+            this.Entry<TEntity>(entity).State = EntityState.Modified;
+        }
+
+        public void isDeleted<TEntity>(TEntity entity) where TEntity : class, IEntity
+        {
+            this.Entry<TEntity>(entity).State = EntityState.Deleted;
+        }
+
+        public void isAdded<TEntity>(TEntity entity) where TEntity : class, IEntity
+        {
+            this.Entry<TEntity>(entity).State = EntityState.Added;
         }
 
         //public void DisposeContext()

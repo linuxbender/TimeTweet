@@ -18,7 +18,7 @@ namespace Ch.TimeTweet.Domain
         T First(Expression<Func<T, bool>> predicate);
 
         T FindById(int id);
-
+        void Update(T entity);
         void Insert(T newEntity);
         void Delete(T entity);
     }
