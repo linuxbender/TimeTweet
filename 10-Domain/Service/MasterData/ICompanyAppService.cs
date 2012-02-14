@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Ch.TimeTweet.Domain.Service.MasterData
 {
-    interface ICompanyAppService<TEntity> where TEntity : class, IEntity
+    public interface ICompanyAppService<TEntity> where TEntity : class, IEntity
     {
+        string DemoService();
     }
 }

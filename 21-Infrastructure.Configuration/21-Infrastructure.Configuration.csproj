@@ -56,6 +56,7 @@
     <Compile Include="NinjectMvcControllerFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup\Repository.cs" />
+    <Compile Include="Setup\Service.cs" />
     <Compile Include="Setup\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
