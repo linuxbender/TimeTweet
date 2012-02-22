@@ -8,9 +8,9 @@ namespace Ch.TimeTweet.Domain
         bool ProxyCreationEnabled { set; }
         IDbSet<TEntity> SetIDbSet<TEntity>() where TEntity : class, IEntity;
         void Commit();
-        void isModified<TEntity>(TEntity entity) where TEntity : class, IEntity;
-        void isDeleted<TEntity>(TEntity entity) where TEntity : class, IEntity;
-        void isAdded<TEntity>(TEntity entity) where TEntity : class, IEntity;
+        void IsModified<TEntity>(TEntity entity) where TEntity : class, IEntity;
+        void IsDeleted<TEntity>(TEntity entity) where TEntity : class, IEntity;
+        void IsAdded<TEntity>(TEntity entity) where TEntity : class, IEntity;
         // void DisposeContext();
     }
 }

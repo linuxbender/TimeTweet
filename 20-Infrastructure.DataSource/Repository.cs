@@ -9,8 +9,8 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
     {
-        private IContext _context;
-        private IDbSet<TEntity> _objectSet;
+        private readonly IContext _context;
+        private readonly IDbSet<TEntity> _objectSet;
 
         public Repository(IContext context)
         {
@@ -77,7 +77,7 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
         public void Update(TEntity entity)
         {
             _objectSet.Attach(entity);
-            _context.isModified<TEntity>(entity);
+            _context.IsModified<TEntity>(entity);
         }
     }
 }

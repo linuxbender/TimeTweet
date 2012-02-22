@@ -31,17 +31,17 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.Context
         {
             this.SaveChanges();
         }
-        public void isModified<TEntity>(TEntity entity) where TEntity : class, IEntity
+        public void IsModified<TEntity>(TEntity entity) where TEntity : class, IEntity
         {
             this.Entry<TEntity>(entity).State = EntityState.Modified;
         }
 
-        public void isDeleted<TEntity>(TEntity entity) where TEntity : class, IEntity
+        public void IsDeleted<TEntity>(TEntity entity) where TEntity : class, IEntity
         {
             this.Entry<TEntity>(entity).State = EntityState.Deleted;
         }
 
-        public void isAdded<TEntity>(TEntity entity) where TEntity : class, IEntity
+        public void IsAdded<TEntity>(TEntity entity) where TEntity : class, IEntity
         {
             this.Entry<TEntity>(entity).State = EntityState.Added;
         }
