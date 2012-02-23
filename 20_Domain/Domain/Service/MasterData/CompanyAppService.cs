@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Ch.TimeTweet.Domain.Entity.MasterData;
 
 namespace Ch.TimeTweet.Domain.Service.MasterData
 {
