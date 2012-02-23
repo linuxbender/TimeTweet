@@ -11,8 +11,11 @@ namespace Ch.TimeTweet.Database.Seed.MasterData
                 return new model.Company[]
                 {
                     new model.Company{ Name = "TimeTweet", ShortName = "TT" }.SetBaseEntity<model.Company>(),
-                    new model.Company{ Name = "Company - 2012", ShortName = "Com12" }.SetBaseEntity<model.Company>(),
-                    new model.Company{ Name = "Company - 2011", ShortName = "Com11"}.SetBaseEntity<model.Company>()
+                    new model.Company{ Name = "Supernatural", ShortName = "SN" }.SetBaseEntity<model.Company>(),
+                    new model.Company{ Name = "Dexter Inc.", ShortName = "Dex"}.SetBaseEntity<model.Company>(),
+                    new model.Company{ Name = "Eureka Inc.", ShortName = "Eureka"}.SetBaseEntity<model.Company>(),
+                    new model.Company{ Name = "Breaking Bad", ShortName = "BB"}.SetBaseEntity<model.Company>(),
+                    new model.Company{ Name = "Californication", ShortName = "CC Inc."}.SetBaseEntity<model.Company>()                    
                 };
             }
         }
