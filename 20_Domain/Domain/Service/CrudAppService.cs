@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Ch.TimeTweet.Domain.Entity;
 
 namespace Ch.TimeTweet.Domain.Service
 {

@@ -11,9 +11,10 @@ namespace Ch.TimeTweet.Domain
 
         IEnumerable<T> SelectAll();
 
-        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
+        IQueryable<T> Find(Expression<Func<T, bool>> predicate);
 
-        IEnumerable<T> EagerLoad<TProperty>(Expression<Func<T, TProperty>> path);
+        IQueryable<T> EagerLoad<TProperty>(Expression<Func<T, TProperty>> path);
+
         IEnumerable<T> EagerDeepLoad<TProperty>(Expression<Func<T, TProperty>> path);
 
         T First(Expression<Func<T, bool>> predicate);

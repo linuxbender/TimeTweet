@@ -17,7 +17,7 @@ namespace Ch.TimeTweet.Presentation.Web.Controllers
         {                                 
             var foo2 = _uow.Company.SelectAll();
             var foo4 = _uow.Employee.EagerDeepLoad(o => o.Company);
-            var foo5 = _uow.Employee.EagerLoad(c => c.Company);
+            var foo5 = _uow.Employee.FindById(2);
             var demo5 = foo5;
             var demo4 = foo4;
             return View(foo2);

@@ -18,6 +18,8 @@ namespace Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet
         public IDbSet<Company> Company { get; set; }
         public IDbSet<Employee> Employee { get; set; }
         public IDbSet<TimeCard> TimeCard { get; set; }
+        public IDbSet<Language> Language { get; set; }
+        public IDbSet<State> State { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {                        

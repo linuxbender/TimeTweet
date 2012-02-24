@@ -13,7 +13,7 @@ namespace Ch.TimeTweet.Domain.Entity.TimeClock
         [StringLength(Number.MaxLength60)]
         public string Name { get; set; }
 
-        public int PersonId { get; set; }
+        public int EmployeeId { get; set; }
         public virtual Employee Employee { get; set; }
     }
 }

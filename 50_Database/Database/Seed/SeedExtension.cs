@@ -1,5 +1,6 @@
 ﻿using System;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
+using Ch.TimeTweet.Domain.Entity;
 using Ch.TimeTweet.Domain.Entity.MasterData;
 
 namespace Ch.TimeTweet.Database.Seed

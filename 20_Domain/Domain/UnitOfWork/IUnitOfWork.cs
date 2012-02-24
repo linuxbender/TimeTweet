@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Ch.TimeTweet.Domain.UnitOfWork
+﻿namespace Ch.TimeTweet.Domain.UnitOfWork
 {
     public interface IUnitOfWork // : IDisposable
     {    	

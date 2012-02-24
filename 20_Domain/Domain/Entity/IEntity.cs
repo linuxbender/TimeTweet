@@ -1,4 +1,4 @@
-﻿namespace Ch.TimeTweet.Domain
+﻿namespace Ch.TimeTweet.Domain.Entity
 {
     public interface IEntity
     {

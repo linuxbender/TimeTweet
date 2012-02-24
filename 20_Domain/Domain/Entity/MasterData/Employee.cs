@@ -16,6 +16,6 @@ namespace Ch.TimeTweet.Domain.Entity.MasterData
         public int CompanyId { get; set; }
         public virtual Company Company { get; set; }
 
-        public virtual ICollection<TimeCard> TimeCard { get; set; }
+        //public virtual ICollection<TimeCard> TimeCard { get; set; }
     }
 }

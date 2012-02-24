@@ -1,7 +1,6 @@
-﻿using System;
-using Ninject;
+﻿using Ch.TimeTweet.Domain.Entity.MasterData;
 using Ch.TimeTweet.Domain.Service.MasterData;
-using Ch.TimeTweet.Domain.Entity.MasterData;
+using Ninject;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration.Setup
 {

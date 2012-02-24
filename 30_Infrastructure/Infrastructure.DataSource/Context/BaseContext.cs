@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
 using Ch.TimeTweet.Domain;
+using Ch.TimeTweet.Domain.Entity;
 
 namespace Ch.TimeTweet.Infrastructure.DataSource.Context
 {

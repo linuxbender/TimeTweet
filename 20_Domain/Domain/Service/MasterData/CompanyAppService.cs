@@ -1,4 +1,5 @@
 ﻿using System;
+using Ch.TimeTweet.Domain.Entity;
 
 namespace Ch.TimeTweet.Domain.Service.MasterData
 {

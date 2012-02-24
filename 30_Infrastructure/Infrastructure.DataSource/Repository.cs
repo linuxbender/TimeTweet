@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using Ch.TimeTweet.Domain;
+using Ch.TimeTweet.Domain.Entity;
 
 namespace Ch.TimeTweet.Infrastructure.DataSource
 {
@@ -23,7 +24,7 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
             _objectSet = objectSet;
         }
 
-        public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
+        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
             return _objectSet.Where(predicate);
         }
@@ -64,7 +65,7 @@ namespace Ch.TimeTweet.Infrastructure.DataSource
             _objectSet.Remove(entity);
         }
 
-        public IEnumerable<TEntity> EagerLoad<TProperty>(Expression<Func<TEntity, TProperty>> path)
+        public IQueryable<TEntity> EagerLoad<TProperty>(Expression<Func<TEntity, TProperty>> path)
         {            
             return _objectSet.Where(t => t.Id > 0).Include(path);            
         }

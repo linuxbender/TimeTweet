@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Ch.TimeTweet.CrossCutting.Common.Constant;
 using Ch.TimeTweet.Domain.Service.Entity;
 
-namespace Ch.TimeTweet.Domain.Entity.MasterData
+namespace Ch.TimeTweet.Domain.Entity
 {
     public abstract class BaseEntity : IEntity, IConcurrencyControl, ITimeStampsControl, IUpdateControl
     {
