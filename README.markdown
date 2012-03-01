@@ -7,5 +7,5 @@ Time Tweet Project
 + EF 4.3 with Db Migration
 + creativecommons.org/licenses/by-nc-sa/3.0/
 + Feb.2012 init project
-+ Microsoft Visual Stduio 2010 Pro
++ Microsoft Visual Studio 2010 Pro
 + ReSharper 6.1
