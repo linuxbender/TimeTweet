@@ -9,6 +9,7 @@ using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.MasterData;
 using Ch.TimeTweet.Infrastructure.DataSource.UnitOfWork.TimeClock;
 using Ninject;
 using Ninject.Parameters;
+using Ninject.Web.Common;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration.Setup
 {

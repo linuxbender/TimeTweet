@@ -1,5 +1,6 @@
 ﻿using Ch.TimeTweet.Infrastructure.DataSource.Context.TimeTweet;
 using Ninject;
+using Ninject.Web.Common;
 using IContext = Ch.TimeTweet.Domain.IContext;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration.Setup

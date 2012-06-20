@@ -4,6 +4,7 @@ using Ch.TimeTweet.Domain.Entity.MasterData;
 using Ch.TimeTweet.Domain.Entity.TimeClock;
 using Ch.TimeTweet.Infrastructure.DataSource;
 using Ninject;
+using Ninject.Web.Common;
 
 namespace Ch.TimeTweet.Infrastructure.Configuration.Setup
 {
